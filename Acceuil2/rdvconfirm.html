@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de consultation</title>
+    <link rel="stylesheet" href="rdv.css">
+</head>
+<body>
+    <!-- En-tête avec le logo et les informations du client -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Health North">
+        </div>
+        <div class="user-info">
+            <?php
+                session_start();
+                // Supposons que les informations de l'utilisateur connecté sont stockées dans la session
+                $nom = isset($_SESSION['nom']) ? $_SESSION['nom'] : "Nom_client";
+                $prenom = isset($_SESSION['prenom']) ? $_SESSION['prenom'] : "Prénom_client";
+                echo "Bonjour, $prenom $nom !";
+            ?>
+        </div>
+    </header>
+
+    <!-- Table de rendez-vous -->
+    <section>
+        <h2>Vos rendez-vous</h2>
+        <table border="1">
+            <tr>
+                <th>Date</th>
+                <th>Heure</th>
+                <th>Description</th>
+            </tr>
+            <?php
+                // Connexion à la base de données
+                $servername = "127.0.0.1";
+                $username = "root";
+                $password = "";
+                $dbname = "healthnorth";
+
+                // Créer la connexion
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Vérifier la connexion
+                if ($conn->connect_error) {
+                    die("La connexion a échoué: " . $conn->connect_error);
+                }
+
+                // Supposons que l'ID de l'utilisateur est stocké dans la session
+                $utilisateur_id = isset($_SESSION['utilisateur_id']) ? $_SESSION['utilisateur_id'] : 1;
+
+                // Récupérer les rendez-vous pour l'utilisateur connecté
+                $sql = "SELECT date_rdv, heure_rdv, description FROM rendezvous WHERE utilisateur_id = $utilisateur_id";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // Afficher chaque rendez-vous
+                    while($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . $row["date_rdv"] . "</td>";
+                        echo "<td>" . $row["heure_rdv"] . "</td>";
+                        echo "<td>" . $row["description"] . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='3'>Aucun rendez-vous trouvé</td></tr>";
+                }
+
+                // Fermer la connexion
+                $conn->close();
+            ?>
+        </table>
+    </section>
+</body>
+</html>

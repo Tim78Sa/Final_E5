@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de consultation</title>
+    <link rel="stylesheet" href="rdv.css">
+</head>
+<body>
+    <!-- En-tête avec le logo et les informations du client -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Health North">
+        </div>
+        <div class="user-info">
+            <?php
+                // Code PHP pour récupérer les informations du client connecté (nom et prénom)
+                $nom = "Nom_client"; // Remplacer par le nom du client connecté
+                $prenom = "Prénom_client"; // Remplacer par le prénom du client connecté
+                echo "Bonjour, $prenom $nom !";
+            ?>
+        </div>
+    </header>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <ul>
+            <li>
+                <select>
+                    <option value="" disabled selected>Choisissez une spécialité</option>
+                    <option value="chirurgie">Chirurgie ambulatoire</option>
+                    <option value="hospitalisation">Hospitalisation</option>
+                    <option value="imagerie">Imagerie médicale</option>
+                    <option value="reproduction">Médecine reproductive et génétique</option>
+                    <option value="cytopathologie">Cytopathologie et biologie médicale</option>
+                    <option value="tests">Tests spécialisés</option>
+                </select>
+            </li>
+            <li>
+                <select>
+                    <option value="" disabled selected>Choisissez une région</option>
+                    <!-- Ajoutez les options pour les régions de France -->
+                    <option value="Yvelines">Yvelines</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Seine-Saint-Denis">Seine-Saint-Denis</option>
+                    <option value="Hauts-de-Seine">Hauts-de-Seine</option>
+                    <option value="Seine-et-Marne">Seine-et-Marne</option>
+                    <option value="Essone">Essone</option>
+                    <option value="Val-de-Marne">Val-de-Marne</option>
+                    <!-- Ajoutez d'autres options au besoin -->
+                </select>
+            </li>
+            <li>
+                <!-- Calendrier pour choisir un rendez-vous -->
+                <input type="date" id="date" name="date">
+            </li>
+            <li>
+                <!-- Espace pour déposer des documents -->
+                <input type="file" id="documents" name="documents">
+            </li>
+            <li>
+                <!-- Bouton de validation -->
+                <button class="blue-button">Valider</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Pied de page avec la barre RGPD -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Réseaux sociaux</a>
+            <a href="#">RGPD</a>
+            <a href="#">Nous contacter</a>
+            <a href="#">Postuler</a>
+        </div>
+    </footer>
+</body>
+</html>

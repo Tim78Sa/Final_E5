@@ -1,0 +1,56 @@
+/* Reset des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: #f2f2f2; /* Couleur de fond */
+    padding: 20px;
+}
+
+/* Style du logo */
+.logo img {
+    height: 50px; /* Ajustez la taille du logo selon vos besoins */
+}
+
+/* Style du contenu principal */
+main {
+    text-align: center;
+    margin-top: 50px; /* Marge en haut */
+}
+
+/* Style du conteneur des boutons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style des boutons */
+.blue-button {
+    background-color: #007bff; /* Bleu */
+    color: #fff; /* Blanc */
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Supprimer la décoration du lien */
+}
+
+/* Style du pied de page */
+footer {
+    clear: both;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Style des liens dans le pied de page */
+.footer-links a {
+    color: #333; /* Couleur de texte sombre */
+    text-decoration: none;
+    margin: 0 10px;
+}

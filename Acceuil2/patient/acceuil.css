@@ -1,0 +1,87 @@
+/* Reset des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du fond gris */
+body {
+    background-color: #f2f2f2;
+}
+
+/* Style de l'en-tête avec le titre */
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style du titre */
+.title {
+    color: #007bff; /* Couleur bleue pour correspondre aux boutons */
+    font-size: 18px;
+}
+
+/* Style du logo */
+.logo {
+    margin-bottom: 20px;
+}
+
+/* Style des boutons de connexion */
+.blue-button {
+    background-color: #007bff; /* Bleu */
+    color: #fff; /* Blanc */
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style du conteneur des boutons */
+.button-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Style du conteneur des annonces */
+.ad-container {
+    width: 30%;
+    float: right;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+/* Style du conteneur des informations sur l'entreprise */
+.company-info {
+    width: 30%;
+    clear: both;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Déplacer les informations sur l'entreprise juste au-dessus de la barre RGPD */
+.company-info {
+    position: absolute;
+    bottom: 50px; /* Réglage de la hauteur au-dessus de la barre RGPD */
+    width: 100%; /* Largeur maximale */
+}
+
+/* Style du pied de page */
+footer {
+    clear: both;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Style des liens dans le pied de page */
+.footer-links a {
+    color: #333; /* Couleur de texte sombre */
+    text-decoration: none;
+    margin: 0 10px;
+}

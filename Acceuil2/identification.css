@@ -1,0 +1,72 @@
+/* Reset des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du fond gris */
+body {
+    background-color: #f2f2f2;
+}
+
+/* Style de l'en-tête avec le titre */
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style du titre */
+.title {
+    color: #007bff; /* Couleur bleue pour correspondre aux boutons */
+    font-size: 24px;
+}
+
+/* Style du logo */
+.logo {
+    margin-bottom: 20px;
+}
+
+/* Style du conteneur du formulaire de connexion */
+.login-container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style des champs du formulaire */
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style du bouton de soumission */
+.blue-button {
+    background-color: #007bff; /* Bleu */
+    color: #fff; /* Blanc */
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style du pied de page */
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Style des liens dans le pied de page */
+.footer-links a {
+    color: #333; /* Couleur de texte sombre */
+    text-decoration: none;
+    margin: 0 10px;
+}

@@ -1,0 +1,77 @@
+/* Reset des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style de l'en-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style du logo */
+.logo img {
+    height: 50px; /* Ajustez la taille du logo selon vos besoins */
+}
+
+/* Style des informations du client */
+.user-info {
+    font-weight: bold;
+}
+
+/* Style de la barre de navigation */
+nav {
+    background-color: #007bff; /* Couleur bleue */
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+/* Style du sélecteur */
+select {
+    padding: 8px;
+}
+
+/* Style du calendrier */
+input[type="date"] {
+    padding: 8px;
+}
+
+/* Style du bouton de validation */
+.blue-button {
+    background-color: #007bff; /* Bleu */
+    color: #fff; /* Blanc */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style du pied de page */
+footer {
+    clear: both;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Style des liens dans le pied de page */
+.footer-links a {
+    color: #333; /* Couleur de texte sombre */
+    text-decoration: none;
+    margin: 0 10px;
+}

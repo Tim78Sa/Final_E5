@@ -1,0 +1,72 @@
+/* Reset des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du fond gris */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Style de l'en-tête avec le logo et les informations du patient */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
+
+/* Style du logo */
+.logo img {
+    height: 50px;
+}
+
+/* Style des informations de l'utilisateur */
+.user-info {
+    text-align: right;
+    font-size: 18px;
+}
+
+.user-info p {
+    margin: 5px 0;
+}
+
+/* Conteneur principal */
+.main-container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style de la table des rendez-vous */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}

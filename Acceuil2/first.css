@@ -1,0 +1,77 @@
+/* Reset des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du fond gris */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Style de l'en-tête avec le titre */
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style du titre */
+.title {
+    color: #007bff; /* Couleur bleue pour correspondre aux boutons */
+    font-size: 24px;
+}
+
+/* Style du conteneur du formulaire */
+.form-container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrer le contenu */
+}
+
+/* Style des boutons de choix */
+.choice-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Pour gérer l'affichage sur petits écrans */
+}
+
+.choice-button {
+    background-color: #007bff; /* Bleu */
+    color: #fff; /* Blanc */
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.choice-button:hover {
+    background-color: #0056b3; /* Couleur bleue plus foncée au survol */
+}
+
+/* Style du pied de page */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+/* Style des liens dans le pied de page */
+.footer-links a {
+    color: #333; /* Couleur de texte sombre */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Rendez-vous</title>
+    <link rel="stylesheet" href="rdv_patient.css">
+</head>
+<body>
+    <!-- En-tête avec le logo et les informations du patient -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="user-info">
+            <p>Nom : <?php echo $utilisateur['prenom'] . " " . $utilisateur['nom']; ?></p>
+            <p>Numéro de sécurité sociale : <?php echo $utilisateur['num_secu']; ?></p>
+            <?php
+                echo $utilisateur['prenom'] . " " . $utilisateur['nom'] . " - Numéro de sécu: " . $utilisateur['num_secu'];
+            ?>
+        </div>
+    </header>
+
+    <!-- Conteneur principal -->
+    <div class="main-container">
+        <h2>Mes Rendez-vous</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Heure</th>
+                <th>Région</th>
+                <th>Docteur</th>
+                <th>Spécialisation</th>
+            </tr>
+            <?php foreach ($rdvs as $rdv): ?>
+            <tr>
+                <td><?php echo $rdv['date']; ?></td>
+                <td><?php echo $rdv['heure']; ?></td>
+                <td><?php echo $rdv['region']; ?></td>
+                <td><?php echo $rdv['docteur_nom']; ?></td>
+                <td><?php echo $rdv['specialisation']; ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+</body>
+</html>

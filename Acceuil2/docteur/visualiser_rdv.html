@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualiser Rendez-vous</title>
+    <link rel="stylesheet" href="visualiser_rdv.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <h1 class="title">Visualiser les Rendez-vous</h1>
+    </header>
+
+    <div class="form-container">
+        <table>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Date</th>
+                <th>Heure</th>
+                <th>Commentaire</th>
+            </tr>
+            <?php while ($row = $rdvs->fetch_assoc()): ?>
+                <tr>
+                    <td><?php echo $row['nom']; ?></td>
+                    <td><?php echo $row['prenom']; ?></td>
+                    <td><?php echo $row['date']; ?></td>
+                    <td><?php echo $row['heure']; ?></td>
+                    <td>
+                        <form method="POST" action="visualiser_rdv.php">
+                            <input type="hidden" name="rdv_id" value="<?php echo $row['id']; ?>">
+                            <input type="text" name="commentaire" required>
+                            <input type="submit" value="Ajouter Ordonnance">
+                        </form>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+        </table>
+    </div>
+</body>
+</html>

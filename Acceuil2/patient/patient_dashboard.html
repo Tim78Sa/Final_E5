@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord Patient</title>
+    <link rel="stylesheet" href="patient_dashboard.css">
+</head>
+<body>
+    <!-- En-tête avec le logo et les informations du patient -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="user-info">
+            <p>Nom : <?php echo $utilisateur['prenom'] . " " . $utilisateur['nom']; ?></p>
+            <p>Numéro de sécurité sociale : <?php echo $utilisateur['num_secu']; ?></p>
+            <?php
+                echo $utilisateur['prenom'] . " " . $utilisateur['nom'] . " - Numéro de sécu: " . $utilisateur['num_secu'];
+            ?>
+        </div>
+    </header>
+
+    <!-- Conteneur principal -->
+    <div class="main-container">
+        <!-- Boutons de navigation -->
+        <div class="nav-buttons">
+            <button onclick="window.location.href='prendre_rdv.html'">Prendre RDV</button>
+            <button onclick="window.location.href='rdv_patient.html'">Visualiser mes RDV</button>
+            <button onclick="window.location.href='documents_patient.html'">Documents</button>
+        </div>
+
+        <!-- Section des commentaires -->
+        <div class="comments-section">
+            <h2>Commentaires</h2>
+            <textarea rows="5" placeholder="Laissez vos commentaires ici..."></textarea>
+        </div>
+    </div>
+</body>
+</html>

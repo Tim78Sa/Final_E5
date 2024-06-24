@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendre Rendez-vous</title>
+    <link rel="stylesheet" href="prendre_rdv.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="user-info">
+            <p>Nom : <?php echo $utilisateur['prenom'] . " " . $utilisateur['nom']; ?></p>
+            <p>Numéro de sécurité sociale : <?php echo $utilisateur['num_secu']; ?></p>
+            <?php
+                echo $utilisateur['prenom'] . " " . $utilisateur['nom'] . " - Numéro de sécu: " . $utilisateur['num_secu'];
+            ?>
+        </div>
+        <h1 class="title">Prendre un Rendez-vous</h1>
+    </header>
+
+    <div class="form-container">
+        <form method="POST" action="prendre_rdv.php">
+            <label for="utilisateur_id">Votre ID :</label>
+            <input type="text" id="utilisateur_id" name="utilisateur_id" required>
+
+            <label for="docteur_id">Docteur :</label>
+            <select id="docteur_id" name="docteur_id" required>
+                <?php while ($row = $docteurs->fetch_assoc()): ?>
+                    <option value="<?php echo $row['id']; ?>">
+                        <?php echo $row['nom'] . " - " . $row['specialisation'] . " - " . $row['region']; ?>
+                    </option>
+                <?php endwhile; ?>
+            </select>
+
+            <label for="date">Date :</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="heure">Heure :</label>
+            <input type="time" id="heure" name="heure" required>
+
+            <input type="submit" value="Prendre Rendez-vous" class="blue-button">
+        </form>
+    </div>
+</body>
+</html>
+
